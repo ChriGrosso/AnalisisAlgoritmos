@@ -55,7 +55,7 @@ int* generate_perm(int N)
     perm[i]=i+1;
   for(i=0;i<N;i++){
     t=perm[i];
-    r=random_num(i,N-1);
+    r=random_num(0,N-1);
     if (r == ERR){ //Random Number Check
       free(perm); //Free memory
       return NULL; 

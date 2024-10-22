@@ -105,7 +105,9 @@ short save_time_table(char* file, PTIME_AA ptime, int n_times)
 
     // Writing Data
     for(int i = 0; i<n_times;i++){
-      fprintf(f, "%d\t%.6f\t%.2f\t%d\t%d\n", ptime[i].N, ptime[i].time, 
+      /*fprintf(f, "%d\t%.6f\t%.2f\t%d\t%d\n", ptime[i].N, ptime[i].time, 
+          ptime[i].average_ob, ptime[i].max_ob, ptime[i].min_ob);*/
+          fprintf(f, "%d;%.2f;%.2f;%d;%d\n", ptime[i].N, ptime[i].time, 
           ptime[i].average_ob, ptime[i].max_ob, ptime[i].min_ob);
       //fprintf(f, "%d\t%f\n", ptime[i].N, ptime[i].average_ob);
       }
