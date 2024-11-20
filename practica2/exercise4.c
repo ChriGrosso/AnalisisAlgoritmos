@@ -2,7 +2,7 @@
 /* Programa: ejercise4       Date:                */
 /* Authors:                                       */
 /*                                                */
-/* Program that checks MergeSort                  */
+/* Program that checks InsertSort                 */
 /*                                                */
 /* Input: Command Line                            */
 /* -size: number of elements of each permutation  */
@@ -33,12 +33,12 @@ int main(int argc, char** argv)
   printf("Done by: your names\n");
   printf("Group: Your group\n");
 
-
+  /* check command line */
   for(i = 1; i < argc; i++) {
     if (strcmp(argv[i], "-size") == 0) {
       tamano = atoi(argv[++i]);
     } else {
-      fprintf(stderr, "Wrong parameter %s\n", argv[i]);
+      fprintf(stderr, "Wrong paramenter %s\n", argv[i]);
     }
   }
 
@@ -49,11 +49,10 @@ int main(int argc, char** argv)
     exit(-1);
   }
 
-  
-  ret = heapsort(perm, 0, tamano - 1);
+  ret=heapsort(perm, 0, tamano-1);
 
   if (ret == ERR) {
-    printf("Error: Error in MergeSort\n");
+    printf("Error: Error in Mergesort\n");
     free(perm);
     exit(-1);
   }
@@ -67,3 +66,4 @@ int main(int argc, char** argv)
 
   return 0;
 }
+

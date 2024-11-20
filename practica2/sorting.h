@@ -23,7 +23,7 @@
 typedef int (* pfunc_sort)(int*, int, int);
 
 /* Functions */
-
+int heapsort(int* tabla, int ip, int iu);
 int mergesort(int* tabla, int ip, int iu);
 int BubbleSort(int* array, int ip, int iu);
 int BubbleSortFlag(int* array, int ip, int iu);
